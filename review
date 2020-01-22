@@ -1,0 +1,192 @@
+/* Programming Languages pt. 1 */
+# What is the requirement of a PL?
+Must be universal (ie iteration, recursion, or both)
+
+# What are the two theoretical foundations of modern computers?
+Turing Machine, Church’s Lambda Calculus
+
+# What is the ‘only’ computer model used for all those years?
+Von Neumann Architecture
+
+# What is the oldest higher level PL?
+Fortran (1957)
+
+# What is the second oldest higher level PL?
+LISP (1958)
+
+# What is the first imperative (Turing machine based) PL?
+Fortran
+
+# What is the first functional PL?
+LISP
+
+# What is the first OO PL?
+Smalltalk
+
+# What is the first influential PL?
+C
+
+# What is the PL that all modern day syntax is based?
+Algol60
+
+# What are the three things learned from DO K=1, 3?
+No space in variable name “variableName”, keyword “DO”, no easy mixed syntax
+
+# What is the importance of Pascal?
+Educational, strict procedural
+
+# What is the importance of PL/1?
+Cannot simply combine languages
+
+# What is the importance of SML?
+Most strictly typed
+
+
+/* Programming Languages pt. 2 */
+# What is a+1 if a is a variable?
+(1) a is primitive, (value of a) + 1
+(2) a is composite, (address of a) + 1
+ 
+# What is the motivation for scope?
+Variable name reuse, or want variable to be visible locally
+
+# What is static scope?
+Solve scope by “looking at paper”
+
+# What is dynamic scope?
+Solve scope by “running program” (execute)
+
+# What is static type binding?
+Type association is decided “on paper”
+
+# What is the variable scope rule?
+Block inside out
+
+# What is the function return scope rule?
+ONE value/unit immediately after return
+
+# What is the function call scope rule?
+ONE statement/block immediately after function name
+
+# What is the loop scope rule?
+ONE statement/block immediately after for/while
+
+# What is the value of 3^4^5?
+Right associative 3^(4^5)
+
+# What is the output of:
+# 	if (1<2) then if(2==3) then print(“1”) else print(“2”)
+2
+
+# Can a subprogram return more than one value? How?
+NO. Create one unit; (class/array for multiple units)
+
+# What does Java/C use for passing parameters?
+Pass by value
+
+# What is the protocol of a function? What is the protocol of the following:
+# 	fun foo(a, nil) = nil |  foo(a,b::Ls) = (a,b)::foo(a,Ls);
+Input parameter type -> return type
+‘a + ‘b list -> (‘a * ‘b) list
+
+# Overloading vs. Overriding.
+Overloading: same funName, different signature
+Overriding: same funName, same signature, same in-class hierarchy, different classes
+
+# What is the design pattern for GUI programming?
+MVC (Model-View-Controller)
+
+# What is the main technique of constructing a compiler?
+SDT (Syntax Driven Translation)
+
+# What is a CC?
+Compiler compiler
+
+
+/* Variables and Types */
+# What are the four major programming paradigms?
+Imperative, functional, logical, OO
+
+# What is the view of programming under imperative paradigm?
+Changing machine state (memory and register)
+
+# What is the view of programming under functional paradigm?
+Applying functions
+
+# Why are variables so important?
+Variable=memory (imperative PLs all about changing memory)
+
+# Is a keyword the same as reserved word? Give an example.
+NO. Java “false” is a reserved word but not a keyword
+
+# What are the six major type categories?
+Name, address, value, type, scope, lifetime
+
+# What is a data type? Why introduce types?
+Data type is defined by values it can take, operations that can be performed on it, and the PL
+Compiler can provide additional consistency check
+
+# What is the strongest typed PL?
+Haskell (or SML, Scala)
+
+# What is the cardinality of datetype day={Sun, Mon, Tue, Wed, Thr, Fri, Sat}?
+7
+
+# Why is data type ‘tree’ a recursive type?
+# 	datatype ‘data tree = Empty | Node of ‘data tree * ‘data * ‘data tree;
+Type name “tree” is in the definition
+
+# What are first-class values?
+Assign, compose, argument, return
+
+# What is the order of the following ML function?
+# 	(int*int -> real) -> (bool -> (int*real))
+2
+
+# What is the order of the following ML function?
+# 	fun foo x = fn y => x+1;
+2
+
+# What is the order of the following LISP function?
+# 	(defun foo(x) (lambda (y) (+ x 1)))
+2
+
+# Link the applicable categories:
+[Data Type Category – Data Type(s)]
+build in – numeric, sequences, mappings, classes, instances, exceptions
+primitive – int, boolean, char
+user defined subrange – [subset]
+enumeration – ie SML tuple, SML conjunctive list
+interloop – ie C while loop
+cartesian product – [the product of two sets]
+disjoint union – [combines two sets while keeping original set membership]
+higher order – [takes a function as an argument or returns a function]
+mapping – [collection of values used as input, same function applied to each, new collection produced]
+iterative binding – [loop is repeatedly executed until a condition is met]
+recursive – [method is called within its own definition]
+
+
+/* Bindings */
+# Provide two major advantages of recursion based languages over iteration based.
+Defining recursion types is more natural, implementation of recursive type or algorithm is shorter
+
+# For a variable, what is l_value, what is r_value?
+Address, value
+
+# What is ‘a’ if ‘a’ is a variable?
+If ’a’ has primitive type -> value; else if ‘a’ has composite type -> address
+
+# What is static type binding what is dynamic binding?
+Static is on paper, dynamic on executing
+
+# Which binding does Java use for shadowed variables?
+Static binding
+
+# Which binding does Java use for overriding methods?
+Dynamic binding
+
+# Which PL has the dynamic type?
+LISP, JavaScript, Prolog, Python, Smalltalk, etc.
+
+# In your knowledge, which language has the weakest type?
+Perl
